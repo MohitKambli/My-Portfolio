@@ -91,19 +91,6 @@ body {
   opacity: 1;
 }
 
-.bg {
-  position: absolute;
-  left: -25vw;
-  top: -50vw;
-  width: 150vw;
-  height: 200vw;
-  background-image: url(https://images.unsplash.com/photo-1538291323976-37dcaafccb12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80);
-  background-size: cover;
-  z-index: -1;
-  -webkit-filter: blur(120px);
-  filter: blur(120px);
-}
-
 span {
   position: sticky;
   height: 100px;
@@ -186,7 +173,7 @@ a {
   right: 0;
   padding: 10px 20px;
   float: right;
-  font-family: "Lugrasimo-Regular";
+  font-family: 'Dancing Script', cursive;
   mix-blend-mode: overlay;
   color: #fff;
   font-size: 15px;
@@ -196,19 +183,8 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: 'learning_curve_bold_ot_ps';
-  src: url('E:/Programming/Projects/MyPortfolio/learning_curve_bold_ot_ps.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Lugrasimo-Regular';
-  src: url('E:/Programming/Projects/MyPortfolio/Lugrasimo-Regular.ttf');
-}
-
 .scroll {
   position: fixed;
-  /* background-color: rgba(0, 0, 0, 0.7); */
   bottom: 0;
   pointer-events: none;
 }
