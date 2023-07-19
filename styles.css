@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #192A51;
+}
+
+.scrollText {
+  width: 300px;
+  margin-top: -60px;
+  margin-left: -90px;
+  font-size: 38px;;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  /* background-color: #c9d6df; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+}
+.scroll {
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+}
+.scroll::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+
+
+.name {
+  display: flex;
+  font-size: 60px;
+  align-items: flex-start;
+  color: #000;
+  justify-content: center;
+  opacity: 1;
+}
+
+.bg {
+  position: absolute;
+  left: -25vw;
+  top: -50vw;
+  width: 150vw;
+  height: 200vw;
+  background-image: url(https://images.unsplash.com/photo-1538291323976-37dcaafccb12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80);
+  background-size: cover;
+  z-index: -1;
+  -webkit-filter: blur(120px);
+  filter: blur(120px);
+}
+
+span {
+  position: sticky;
+  height: 100px;
+  display: inline-flex;
+  align-items: center;
+  /* mix-blend-mode: overlay; */
+  font-family: 'Dancing Script', cursive;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 220px;
+  color: white;
+}
+
+.c1 {
+  top: calc(40% - 100px);
+  margin-top: 100vw;
+}
+
+.c2 {
+  top: calc(40% - 100px);
+  margin-top: 120vw;
+}
+
+.c3 {
+  top: calc(40% - 100px);
+  margin-top: 140vw;
+}
+
+.c4 {
+  top: calc(40% - 100px);
+  margin-top: 160vw;
+}
+
+.c5 {
+  top: calc(40% - 100px);
+  margin-top: 180vw;
+}
+
+.c6 {
+  top: calc(60%);
+  margin-top: 200vw;
+  margin-left: -200px;
+}
+
+.c7 {
+  top: calc(60%);
+  margin-top: 220vw;
+}
+
+.c8 {
+  top: calc(60%);
+  margin-top: 240vw;
+}
+
+.c9 {
+  top: calc(60%);
+  margin-top: 260vw;
+}
+
+.c10 {
+  top: calc(60%);
+  margin-top: 280vw;
+}
+
+.c11 {
+  top: calc(60%);
+  margin-top: 300vw;
+}
+
+.c12 {
+  top: calc(60%);
+  margin-top: 320vw;
+}
+
+a {
+  position: sticky;
+  bottom: -80px;
+  width: 180px;
+  text-align: center;
+  right: 0;
+  padding: 10px 20px;
+  float: right;
+  font-family: "Lugrasimo-Regular";
+  mix-blend-mode: overlay;
+  color: #fff;
+  font-size: 15px;
+  z-index: 1;
+  background-color: #000;
+  border-radius: 20px 0 0;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'learning_curve_bold_ot_ps';
+  src: url('E:/Programming/Projects/MyPortfolio/learning_curve_bold_ot_ps.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Lugrasimo-Regular';
+  src: url('E:/Programming/Projects/MyPortfolio/Lugrasimo-Regular.ttf');
+}
+
+.scroll {
+  position: fixed;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  bottom: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 660px) {
+  a {
+    display: none;
+  }
+  
+  span {
+    font-size: 15vw;
+  }
+}
+
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.stack__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.1), 0 -1px 2px rgba(0,0,0,0.25);
+  font-size: 10rem;
+}
+
+.stack__card:nth-child(1) {
+  background-color: #192A51;
+}
+.stack__card:nth-child(2) {
+  background-color: #192A51;
+}
+.stack__card:nth-child(3) {
+  background-color: #192A51;
+}
+.stack__card:nth-child(4) {
+  background-color: #192A51;
+}
+.stack__card:nth-child(5) {
+  background-color: #192A51;
+}
