@@ -251,13 +251,13 @@ span {
 }
 @keyframes slide {
   100% {
-    top: -230px;
+    top: -235px;
   }
 }
 .dynamic-texts li span {
   color: #FC6D6D;
   position: relative;
-  margin: -3px 0;
+  margin: -1px 0;
   font-size: 70px;
   line-height: 95px;
   font-family: 'Poppins', sans-serif;
@@ -333,6 +333,34 @@ span {
 
 .socials ul a {
   text-decoration: none;
+}
+.download-icon {
+  color: #bae8e8;
+  font-size: 50px;
+}
+.download-icon:hover {
+  color: #2c698d;
+  font-size: 50px;
+}
+.social-download-list {
+  display: inline-block; /* or display: block; if you want the <li> to be a block element */
+  position: relative;
+  padding: 0; /* Remove any padding to ensure the <input> takes the full size */
+}
+.social-download-list:hover {
+  color: #2c698d;
+  background: #bae8e8;
+  cursor: pointer;
+}
+
+.download-icon input {
+  width: 180%;
+  height: 100%;
+  opacity: 0; /* Hide the actual button, but keep it interactive */
+  position: absolute;
+  top: 0;
+  left: -20px;
+  cursor: pointer;
 }
 
 

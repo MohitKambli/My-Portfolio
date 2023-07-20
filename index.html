@@ -36,7 +36,7 @@
       <div class="wrapper">
         <div class="static-text">I'm a</div>
         <ul class="dynamic-texts">
-          <li><span>Master's Graduate.</span></li>
+          <li><span>Master's Candidate.</span></li>
           <li><span>Software Developer.</span></li>
         </ul>
       </div>
@@ -56,7 +56,12 @@
        </div> -->
       <div class="socials">
         <ul>
-          <a href="https://drive.google.com/file/d/10YPa-ApsfdOs6c30ak53Io-dcngzlMDh/view?usp=sharing" download><li><i class="cil-cloud-download"></i></li></a>
+          <li class="social-download-list">
+            <span class="download-icon">
+              <i class="cil-cloud-download"></i>
+              <input type="button" onclick="DownloadFile('Resume_MohitKambli.pdf')" />
+            </span>
+          </li>
           <a href="https://github.com/MohitKambli"><li><i class="cib-github"></i></li></a>
           <a href="https://www.linkedin.com/in/mohit-kambli-9a1087174/"><li><i class="cib-linkedin-in"></i></li></a>
           <a href="https://www.hackerrank.com/mohitkambli8?hr_r=1"><li><i class="cib-hackerrank"></i></li></a>
@@ -77,5 +82,39 @@
     <div class="stack__card">👌</div>
   </div>
 
+
+
+
+  <script type="text/javascript">
+    function DownloadFile(fileName) {
+        //Set the File URL.
+        var url = "https://raw.githubusercontent.com/MohitKambli/My-Portfolio/blob/ee611b53cbe42403c2c86312e40dc0a6dd6c0ab6/" + fileName;
+
+        //Create XMLHTTP Request.
+        var req = new XMLHttpRequest();
+        req.open("GET", url, true);
+        req.responseType = "blob";
+        req.onload = function () {
+            //Convert the Byte Data to BLOB object.
+            var blob = new Blob([req.response], { type: "application/octetstream" });
+
+            //Check the Browser type and download the File.
+            var isIE = false || !!document.documentMode;
+            if (isIE) {
+                window.navigator.msSaveBlob(blob, fileName);
+            } else {
+                var url = window.URL || window.webkitURL;
+                link = url.createObjectURL(blob);
+                var a = document.createElement("a");
+                a.setAttribute("download", fileName);
+                a.setAttribute("href", link);
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+        };
+        req.send();
+    };
+  </script>
 </body>
 </html>
