@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 
 html {
   scroll-behavior: smooth;
@@ -111,61 +113,61 @@ span {
 
 .c2 {
   top: calc(40% - 100px);
-  margin-top: 120vw;
+  margin-top: 110vw;
 }
 
 .c3 {
   top: calc(40% - 100px);
-  margin-top: 140vw;
+  margin-top: 120vw;
 }
 
 .c4 {
   top: calc(40% - 100px);
-  margin-top: 160vw;
+  margin-top: 130vw;
 }
 
 .c5 {
   top: calc(40% - 100px);
-  margin-top: 180vw;
+  margin-top: 140vw;
 }
 
 .c6 {
   top: calc(60%);
-  margin-top: 200vw;
+  margin-top: 150vw;
   margin-left: -200px;
 }
 
 .c7 {
   top: calc(60%);
-  margin-top: 220vw;
+  margin-top: 160vw;
 }
 
 .c8 {
   top: calc(60%);
-  margin-top: 240vw;
+  margin-top: 170vw;
 }
 
 .c9 {
   top: calc(60%);
-  margin-top: 260vw;
+  margin-top: 180vw;
 }
 
 .c10 {
   top: calc(60%);
-  margin-top: 280vw;
+  margin-top: 190vw;
 }
 
 .c11 {
   top: calc(60%);
-  margin-top: 300vw;
+  margin-top: 200vw;
 }
 
 .c12 {
   top: calc(60%);
-  margin-top: 320vw;
+  margin-top: 220vw;
 }
 
-a {
+/* a {
   position: sticky;
   bottom: -80px;
   width: 180px;
@@ -181,7 +183,7 @@ a {
   background-color: #000;
   border-radius: 20px 0 0;
   text-decoration: none;
-}
+} */
 
 .scroll {
   position: fixed;
@@ -210,18 +212,170 @@ a {
 
 .stack__card {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   position: sticky;
   top: 0;
   box-shadow: 0 -1px 3px rgba(0,0,0,0.1), 0 -1px 2px rgba(0,0,0,0.25);
-  font-size: 10rem;
 }
 
 .stack__card:nth-child(1) {
   background-color: #192A51;
 }
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .static-text {
+  color: #fff;
+  font-size: 70px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper .dynamic-texts {
+  margin-left: 20px;
+  height: 95px;
+  line-height: 95px;
+  overflow: hidden;
+}
+.dynamic-texts li {
+  list-style: none;
+  color: #FC6D6D;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 6s steps(2) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -230px;
+  }
+}
+.dynamic-texts li span {
+  color: #FC6D6D;
+  position: relative;
+  margin: -3px 0;
+  font-size: 70px;
+  line-height: 95px;
+  font-family: 'Poppins', sans-serif;
+}
+.dynamic-texts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #192A51;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* .waviy {
+  margin-top: 100px;
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+.waviy span {
+  height: 100px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 5s infinite;
+  animation-delay: calc(.1s * var(--i));
+  font-size: 65px;
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+} */
+
+.socials ul {
+  display: flex;
+  margin-top: 120px;
+}
+.socials ul li {
+  list-style: none;
+  margin: 0 10px;
+  height: 90px;
+  width: 90px;
+  color: #bae8e8;
+  border: 2px solid #bae8e8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  transition: all ease 0.3s;
+}
+
+.socials ul li:hover {
+  color: #2c698d;
+  background: #bae8e8;
+  cursor: pointer;
+}
+
+.socials ul a {
+  text-decoration: none;
+}
+
+
+
+.scrollText-1 {
+  width: 450px;
+  margin-top: -60px;
+  margin-left: -160px;
+  font-size: 38px;;
+}
+.field-1 {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+}
+.scroll-1 {
+  margin-top: 200px;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+}
+.scroll-1::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+
+
 .stack__card:nth-child(2) {
   background-color: #192A51;
 }
